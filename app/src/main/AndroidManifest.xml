@@ -9,9 +9,7 @@
         android:roundIcon="@drawable/money"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".ConstellationActivity" />
         <activity android:name=".NameActivity" />
         <activity android:name=".ResultActivity" />
@@ -22,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AbsoluteActivity"></activity>
     </application>
 
 </manifest>
