@@ -16,26 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- AppTheme.Constellation 테마지정 -->
-        <activity
-            android:name=".ConstellationActivity"
-            android:theme="@style/AppTheme.Constellation" />
-        <!-- AppTheme.Name 테마지정 -->
-        <activity
-            android:name=".NameActivity"
-            android:theme="@style/AppTheme.Name" />
-        <!-- AppTheme.Result 테마지정 -->
-        <activity
-            android:name=".ResultActivity"
-            android:theme="@style/AppTheme.Result" />
-
-        <activity android:name=".TestActivity" >
-
-        </activity>
-        <activity android:name=".AbsoluteActivity" />
-        <activity android:name=".LinearLayoutActivity" />
-        <activity android:name=".RelativeLayoutActivity" />
-        <activity android:name=".ConstraintLayoutActivity" />
     </application>
 
 </manifest>
