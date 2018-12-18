@@ -1,6 +1,7 @@
 package com.akj.lotto
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -49,5 +50,11 @@ class TestActivity : AppCompatActivity() {
     fun goConstellation(view: View) {
         val intent = Intent(this@TestActivity, ConstellationActivity::class.java)
         startActivity(intent)
+    }
+
+    // 암시적 인텐트를 사용해 웹브라우저를 호출한다
+    fun callWeb(view: View){
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com"))
+                startActivity(intent)
     }
 }
