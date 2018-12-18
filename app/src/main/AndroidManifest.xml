@@ -19,6 +19,7 @@
         <activity android:name=".ConstellationActivity" />
         <activity android:name=".NameActivity" />
         <activity android:name=".ResultActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
