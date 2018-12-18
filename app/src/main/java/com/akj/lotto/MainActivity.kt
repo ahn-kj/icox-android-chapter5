@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
             // intent 의 결과 데이터를 전달한다.
             // int 의 리스트를 전달하므로 putIntegerArrayListExtra 를 사용한다.
-            intent.putIntegerArrayListExtra("result", ArrayList(getRandomLottoNumbers()))
+            // intent.putIntegerArrayListExtra("result", ArrayList(getRandomLottoNumbers()))
+            intent.putIntegerArrayListExtra("result", ArrayList(getShuffleLottoNumbers()))
 
             // ResultActivity 를 시작하는 Intent 를 만들고 startActivity 로 실행
             startActivity(intent)
@@ -64,5 +65,23 @@ class MainActivity : AppCompatActivity() {
             lottoNumbers.add(number)
         }
         return lottoNumbers
+    }
+
+    /**
+     * Shuffle 을 사용해 로또 번호 생성
+     */
+    fun getShuffleLottoNumbers(): MutableList<Int> {
+        // 1 ~ 45 번에 로또 번호를 저장할 리스트 생성
+        val list = mutableListOf<Int>()
+
+        // 1~45 까지 for 문을 돌면서 리스트에 로또 번호 저장
+        for(number in 1..45){
+            list.add(number)
+        }
+        // 리스트를 무작위로 섞는다.
+        list.shuffle()
+
+        // 리스트를 앞에서부터 순서대로 6개를 짤라 결과 반환
+        return list.subList(0, 6)
     }
 }
